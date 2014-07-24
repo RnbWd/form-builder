@@ -1,21 +1,42 @@
 @import 'modules';
 
 .main {
-  padding: golden-ratio(14px,  1);
-
-  #{$all-text-inputs} {
-    @include transform(translateZ(0));
-    @include transition(all 1s $ease-in-out-quad);
-    margin: auto;
-  }
+  margin-top: $bar-height;
 }
+
+label {
+  @include transform(translateZ(0));
+  @include transition(all 1s $ease-in-out-quad);
+}
+.tablet {
+  border: 40px solid $dark;
+  border-radius: 15px;
+  padding: 20px;
+  width: 450px;
+  margin: auto;
+  margin-top: 20px;
+  height: 550px;
+}
+
+.sliders {
+  position: fixed;
+  z-index: 100;
+}
+
 .blur {
   @include filter(blur(2px));
 }
 
 .field {
   @include outer-container;
+  @include fill-parent;
   .mid {
-    @include span-columns(6);
+    @include span-columns(1 of 2);
+  }
+  .mod {
+    @include span-columns(1 of 4);
+  }
+  .create {
+    @include span-columns(3 of 4);
   }
 }

@@ -42,6 +42,7 @@
     "gulp-uncss": "^0.4.5",
     "humanize-component": "^0.1.0",
     "intreq": "0.0.0",
+    "ionic": "^1.1.4",
     "jsqrcode": "0.0.6",
     "keycode": "^0.3.0",
     "keycode-component": "^1.1.0",

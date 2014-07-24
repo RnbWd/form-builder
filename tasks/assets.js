@@ -20,7 +20,8 @@ task('sass', task.watch('./src/scss/style.scss'), function(t) {
   var fontAwesome = path.join(__dirname,'../node_modules/font-awesome/scss');
   var bootstrap = path.join(__dirname, '../node_modules/bootstrap-sass/assets/stylesheets');
   var bootswatch = path.join(__dirname, '../node_modules/bootswatch-scss');
-  var sasspaths = neat.with(fontAwesome, bootstrap, bootswatch);
+  var ionic = path.join(__dirname, '../scss/ionic');
+  var sasspaths = neat.with(fontAwesome, bootstrap, bootswatch, ionic);
   fs.src(t.files[0])
       .pipe(vsass({
         includePaths: sasspaths,
