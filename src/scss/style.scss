@@ -1,0 +1,21 @@
+@import 'modules';
+
+.main {
+  padding: golden-ratio(14px,  1);
+
+  #{$all-text-inputs} {
+    @include transform(translateZ(0));
+    @include transition(all 1s $ease-in-out-quad);
+    margin: auto;
+  }
+}
+.blur {
+  @include filter(blur(2px));
+}
+
+.field {
+  @include outer-container;
+  .mid {
+    @include span-columns(6);
+  }
+}
