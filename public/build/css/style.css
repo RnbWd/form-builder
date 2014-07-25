@@ -8742,8 +8742,30 @@ a.button {
   -webkit-transition: none !important;
   transition: none !important; }
 
+@-webkit-keyframes rainbow {
+  from {
+    -webkit-filter: hue-rotate(0deg); }
+
+  to {
+    -webkit-filter: hue-rotate(360deg); } }
+
+@-moz-keyframes rainbow {
+ }
+
+@keyframes rainbow {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg); }
+
+  to {
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg); } }
+
 .main {
-  margin-top: 44px; }
+  margin-top: 44px;
+  -webkit-animation: rainbow 10s linear infinite;
+  -moz-animation: rainbow 10s linear infinite;
+  animation: rainbow 10s linear infinite; }
 
 label {
   -webkit-transform: translateZ(0);
@@ -8765,6 +8787,20 @@ label {
 .sliders {
   position: fixed;
   z-index: 100; }
+
+.sample-text {
+  border-bottom: 2px solid #444; }
+
+.rainbow {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: rainbow 8s linear;
+  -moz-animation: rainbow 8s linear;
+  animation: rainbow 8s linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
 
 .blur {
   -webkit-filter: blur(2px);

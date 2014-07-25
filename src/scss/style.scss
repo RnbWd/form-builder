@@ -1,8 +1,20 @@
 @import 'modules';
 
+@include keyframes(rainbow) {
+  from {
+    @include filter(hue-rotate(0deg));
+  }
+  to {
+    @include filter(hue-rotate(360deg));
+  }
+}
+
+
 .main {
   margin-top: $bar-height;
+  @include animation(rainbow 10.0s linear infinite);
 }
+
 
 label {
   @include transform(translateZ(0));
@@ -21,6 +33,16 @@ label {
 .sliders {
   position: fixed;
   z-index: 100;
+}
+
+.sample-text {
+  border-bottom: 2px solid $dark;
+}
+
+.rainbow {
+  @include transform(translateZ(0));
+  @include animation(rainbow 8.0s linear);
+  @include animation-iteration-count(infinite);
 }
 
 .blur {
